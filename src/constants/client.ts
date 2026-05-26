@@ -1,5 +1,9 @@
 export const CLIENT = {
     name: 'Ploter.com',
+    theme: {
+        primaryColor: '#111827', // bg dark (gray-900)
+        accentColor: '#F97316',  // laranja
+    },
     tagline: 'Comunicação Visual há mais de 30 anos no Rio de Janeiro',
     whatsapp: '5521999611266',
     whatsappMessage: 'Olá! Vim pelo site da Ploter.com e gostaria de solicitar um orçamento.',

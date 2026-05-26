@@ -1,17 +1,18 @@
 import { CLIENT } from '../../constants/client'
+import { theme } from '../../themes'
 import { Image, Layout, Layers, Square, Flag } from 'lucide-react'
 
 const iconMap: Record<string, React.ReactNode> = {
-    Image: <Image size={32} className="text-orange-500" />,
-    Layout: <Layout size={32} className="text-orange-500" />,
-    Layers: <Layers size={32} className="text-orange-500" />,
-    Square: <Square size={32} className="text-orange-500" />,
-    Flag: <Flag size={32} className="text-orange-500" />,
+    Image: <Image size={32} style={{ color: theme.accent }} />,
+    Layout: <Layout size={32} style={{ color: theme.accent }} />,
+    Layers: <Layers size={32} style={{ color: theme.accent }} />,
+    Square: <Square size={32} style={{ color: theme.accent }} />,
+    Flag: <Flag size={32} style={{ color: theme.accent }} />,
 }
 
 export function Services() {
     return (
-        <section id="servicos" className="py-24 bg-white">
+        <section id="servicos" className="py-24" style={{ backgroundColor: theme.bgLight }}>
             <div className="max-w-6xl mx-auto px-4">
 
                 <div className="text-center mb-16">
@@ -27,7 +28,7 @@ export function Services() {
                     {CLIENT.services.map((service) => (
                         <div
                             key={service.title}
-                            className="bg-gray-50 border border-gray-100 rounded-2xl p-8 hover:shadow-lg hover:border-orange-200 transition-all"
+                            className="bg-gray-50 border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition-all"
                         >
                             <div className="mb-4">{iconMap[service.icon]}</div>
                             <h3 className="text-xl font-bold text-gray-900 mb-2">

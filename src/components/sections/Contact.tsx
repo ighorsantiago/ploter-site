@@ -1,9 +1,10 @@
 import { CLIENT, getWhatsAppLink } from '../../constants/client'
+import { theme } from '../../themes'
 import { MessageCircle, MapPin, Clock } from 'lucide-react'
 
 export function Contact() {
     return (
-        <section id="contato" className="py-24 bg-gray-50">
+        <section id="contato" className="py-24" style={{ backgroundColor: theme.bgMuted }}>
             <div className="max-w-6xl mx-auto px-4">
 
                 <div className="text-center mb-16">
@@ -19,14 +20,15 @@ export function Contact() {
                     <div className="space-y-6">
 
                         <div className="flex items-start gap-4">
-                            <MessageCircle className="text-orange-500 mt-1 shrink-0" size={24} />
+                            <MessageCircle className="mt-1 shrink-0" size={24} style={{ color: theme.accent }} />
                             <div>
                                 <p className="font-semibold text-gray-900">WhatsApp</p>
                                 <a
                                     href={`https://wa.me/${CLIENT.whatsapp}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-orange-500 hover:underline"
+                                    className="hover:underline"
+                                    style={{ color: theme.accent }}
                                 >
                                     Clique para conversar
                                 </a>
@@ -34,7 +36,7 @@ export function Contact() {
                         </div>
 
                         <div className="flex items-start gap-4">
-                            <MapPin className="text-orange-500 mt-1 shrink-0" size={24} />
+                            <MapPin className="mt-1 shrink-0" size={24} style={{ color: theme.accent }} />
                             <div>
                                 <p className="font-semibold text-gray-900">Localização</p>
                                 <p className="text-gray-500">{CLIENT.address}</p>
@@ -42,7 +44,7 @@ export function Contact() {
                         </div>
 
                         <div className="flex items-start gap-4">
-                            <Clock className="text-orange-500 mt-1 shrink-0" size={24} />
+                            <Clock className="mt-1 shrink-0" size={24} style={{ color: theme.accent }} />
                             <div>
                                 <p className="font-semibold text-gray-900">Horário</p>
                                 <p className="text-gray-500">{CLIENT.hours}</p>
@@ -51,6 +53,7 @@ export function Contact() {
 
                     </div>
 
+                    {/* Botão WhatsApp — verde fixo (cor da marca) */}
                     <a
                         href={getWhatsAppLink()}
                         target="_blank"

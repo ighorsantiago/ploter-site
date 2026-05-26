@@ -1,18 +1,25 @@
 import { CLIENT, getWhatsAppLink } from '../../constants/client'
+import { theme } from '../../themes'
 import { ArrowRight } from 'lucide-react'
 
 export function Hero() {
     return (
-        <section className="min-h-screen bg-gray-900 flex items-center justify-center pt-20">
+        <section
+            className="min-h-screen flex items-center justify-center pt-20"
+            style={{ backgroundColor: theme.bgDark }}
+        >
             <div className="max-w-6xl mx-auto px-4 text-center">
 
-                <span className="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+                <span
+                    className="inline-block text-sm font-medium px-4 py-1.5 rounded-full mb-6"
+                    style={{ backgroundColor: theme.accent + '1a', color: theme.accent }}
+                >
                     Gráfica no Rio de Janeiro
                 </span>
 
                 <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
                     Sua marca com{' '}
-                    <span className="text-orange-500">impacto visual</span>{' '}
+                    <span style={{ color: theme.accent }}>impacto visual</span>{' '}
                     de verdade
                 </h2>
 
@@ -25,7 +32,8 @@ export function Hero() {
                         href={getWhatsAppLink()}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full text-lg transition-colors"
+                        className="flex items-center justify-center gap-2 text-white font-bold px-8 py-4 rounded-full text-lg transition-opacity hover:opacity-80"
+                        style={{ backgroundColor: theme.accent }}
                     >
                         Solicitar Orçamento
                         <ArrowRight size={20} />
@@ -33,7 +41,7 @@ export function Hero() {
 
                     <a
                         href="#servicos"
-                        className="flex items-center justify-center gap-2 border border-gray-600 hover:border-orange-500 text-gray-300 hover:text-orange-400 font-semibold px-8 py-4 rounded-full text-lg transition-colors"
+                        className="flex items-center justify-center gap-2 border border-gray-600 text-gray-300 font-semibold px-8 py-4 rounded-full text-lg transition-opacity hover:opacity-80"
                     >
                         Ver Serviços
                     </a>

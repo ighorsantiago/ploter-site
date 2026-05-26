@@ -2,25 +2,17 @@ import placaDisplay from '../../assets/placa-display.jpg'
 import placaCorte from '../../assets/placa-corte-especial.jpg'
 import bannerOficina from '../../assets/banner-oficina-sorriso.jpg'
 import { getWhatsAppLink } from '../../constants/client'
+import { theme } from '../../themes'
 
 const photos = [
-    {
-        src: placaDisplay,
-        label: 'Display em placa PS adesivada',
-    },
-    {
-        src: placaCorte,
-        label: 'Placa PS adesivada corte especial',
-    },
-    {
-        src: bannerOficina,
-        label: 'Banner externo — Oficina do Sorriso',
-    },
+    { src: placaDisplay, label: 'Display em placa PS adesivada' },
+    { src: placaCorte, label: 'Placa PS adesivada corte especial' },
+    { src: bannerOficina, label: 'Banner externo — Oficina do Sorriso' },
 ]
 
 export function Gallery() {
     return (
-        <section id="galeria" className="py-24 bg-white">
+        <section id="galeria" className="py-24" style={{ backgroundColor: theme.bgLight }}>
             <div className="max-w-6xl mx-auto px-4">
 
                 <div className="text-center mb-16">
@@ -51,7 +43,8 @@ export function Gallery() {
                     Quer um trabalho como esse?{' '}
                     <a
                         href={getWhatsAppLink()}
-                        className="text-orange-500 hover:underline"
+                        className="hover:underline"
+                        style={{ color: theme.accent }}
                     >
                         Fale com a gente
                     </a>

@@ -1,23 +1,24 @@
 import { Zap, Shield, MapPin, Trophy } from 'lucide-react'
+import { theme } from '../../themes'
 
 const reasons = [
     {
-        icon: <Trophy size={28} className="text-orange-500" />,
+        icon: <Trophy size={28} style={{ color: theme.accent }} />,
         title: '30 Anos de Mercado',
         description: 'Três décadas servindo empresas no Rio com excelência e pontualidade.',
     },
     {
-        icon: <Zap size={28} className="text-orange-500" />,
+        icon: <Zap size={28} style={{ color: theme.accent }} />,
         title: 'Entrega Rápida',
         description: 'Produção ágil para você não perder nenhum prazo.',
     },
     {
-        icon: <Shield size={28} className="text-orange-500" />,
+        icon: <Shield size={28} style={{ color: theme.accent }} />,
         title: 'Qualidade Garantida',
         description: 'Materiais premium e impressão de alta resolução em tudo.',
     },
     {
-        icon: <MapPin size={28} className="text-orange-500" />,
+        icon: <MapPin size={28} style={{ color: theme.accent }} />,
         title: 'Aqui no Rio',
         description: 'Atendimento local, sem intermediários e com suporte real.',
     },
@@ -25,7 +26,7 @@ const reasons = [
 
 export function WhyUs() {
     return (
-        <section className="py-24 bg-gray-900">
+        <section className="py-24" style={{ backgroundColor: theme.bgDark }}>
             <div className="max-w-6xl mx-auto px-4">
 
                 <div className="text-center mb-16">
@@ -41,7 +42,7 @@ export function WhyUs() {
                     {reasons.map((reason) => (
                         <div
                             key={reason.title}
-                            className="bg-gray-800 rounded-2xl p-8 border border-gray-700 hover:border-orange-500 transition-all"
+                            className="bg-gray-800 rounded-2xl p-8 border border-gray-700 transition-all hover:opacity-90"
                         >
                             <div className="mb-4">{reason.icon}</div>
                             <h3 className="text-xl font-bold text-white mb-2">{reason.title}</h3>

@@ -1,11 +1,14 @@
 import { CLIENT } from '../../constants/client'
+import { theme } from '../../themes'
 
 export function Footer() {
     return (
-        <footer className="bg-gray-900 text-gray-400 py-10">
+        <footer className="text-gray-400 py-10" style={{ backgroundColor: theme.bgDark }}>
             <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
                 <div>
-                    <span className="text-orange-500 font-bold text-xl">{CLIENT.name}</span>
+                    <span className="font-bold text-xl" style={{ color: theme.accent }}>
+                        {CLIENT.name}
+                    </span>
                     <p className="text-sm mt-1">{CLIENT.address}</p>
                     <p className="text-sm">{CLIENT.hours}</p>
                 </div>
@@ -16,7 +19,8 @@ export function Footer() {
                             href={CLIENT.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-orange-400 hover:underline"
+                            className="hover:underline"
+                            style={{ color: theme.accent }}
                         >
                             @ploterdigital
                         </a>
